@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arthur Nyaniso Butler Personal Website</title>
+    <link rel="icon" href="ArthurButlerHeadshot.jpg">
+    <script type="text/javascript">
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    <style>
+        body {
+            background-color: darkslategrey;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-image: url(AboutMeBackground.jpg);
+        }
+
+        .Header {
+            background-image: url(https://media.giphy.com/media/26uf7jfPCy0b16DbW/giphy.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 17cm;
+            margin: 0em;
+            padding: 0em;
+            position: inherit;
+        }
+
+        h1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            color: black;
+            font-family: Arial;
+            font-size: 6ch;
+        }
+
+        .image {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            image-rendering: optimizeQuality;
+            width: 10%;
+            border: 1cm;
+            border-color: black;
+            border-radius: 50%;
+
+        }
+
+        a.button {
+            -moz-appearance: button;
+            appearance: button;
+            text-decoration: none;
+            color: darkslategray;
+            font-family: Impact;
+            font-size: 6ch;
+            width: 220px;
+            height: 80px;
+            background-color: black;
+            border-radius: 10%;
+            opacity: 0.9;
+        }
+
+        a.button:hover {
+            -moz-appearance: button;
+            appearance: button;
+            text-decoration: none;
+            background-color: darkslategrey;
+            color: lightgrey;
+            font-size: 3ch;
+            opacity: 0.6;
+        }
+
+        #navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+        .content {
+            padding: 16px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky+.content {
+            padding-top: 60px;
+        }
+
+        h2 {
+            display: flex;
+            font-size: 1cm;
+            font-family: Arial;
+            background-color: gold;
+            width: fit-content;
+            justify-content: center;
+        }
+
+        p {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            font-size: 250%;
+            opacity: 0.8;
+            width: fit-content;
+            background-color: gray;
+            margin: 0em;
+        }
+
+        mark {
+            background-color: gold;
+        }
+
+        .row {
+            display: flex;
+            float: left;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        h3 {
+            display: flex;
+            font-size: 1cm;
+            font-family: Arial;
+            background-color: gold;
+            width: fit-content;
+            justify-content: center;
+        }
+
+        .slideshow-container {
+            background-image: url(Slideshowbackground.jpg);
+            width: 100%;
+            border-radius: 1cm;
+            position: relative;
+            margin: auto;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: 1cm;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: blue;
+        }
+
+        .text {
+            color: #f2f2f2;
+            font-size: 1cm;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Header">
+        <br>
+        <br>
+        <center>
+            <img class="image" src="ArthurButlerHeadshot.jpg" alt="Headshot">
+        </center>
+        <br>
+        <br>
+        <br>
+        <h1><mark>Arthur Nyaniso Butler</mark></h1>
+        <h1><mark>Backend Python Developer</mark></h1>
+        <br>
+        <br>
+        <center><a href="https://www.linkedin.com/in/arthur-butler-7721591a4/" class="button">LinkedIn</a>
+            <a href="https://github.com/CPTWEX012" class="button">Github</a>
+            <a href="https://padlet.com/interncptwex012/kytmkox2mmn0" class="button">Padlet</a>
+        </center>
+    </div>
+    <script type="text/javascript">
+        window.onscroll = function () { myFunction() };
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    <div id="navbar">
+        <a href="#About Me">About Me</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Certificates">Certificates</a>
+        <a href="#Contact">Contact</a>
+    </div>
+    <div class="Aboutme">
+        <center>
+            <h2>About ME</h2>
+            <p>
+                Good day my name is Arthur. I am a hard working, diligent individual that strives to complete tasks to
+                the
+                best
+                of my ability.
+            <p>
+                I have always loved complexed logical problems that I can muse over and solve.
+            </p>
+            <p>
+                My
+                interests
+                are emerging technologies
+                such as ray tracing, quantum supremacy, VR, AI and micro-computing. I am also an avid chess player.
+            </p>
+            <p>
+                My
+                love
+                for chess stems from the different strategies you can utilize to either attack or protect against
+                your opponent and the fact that it is problem solving at it's finest.
+            </p>
+            <p>
+                My goal is to become a
+                Senior Python back-end or fullstack developer.
+            </p>
+            <p>I find enjoyment from playing around with different
+                python
+                modules
+                such as numpy, opencv, math, django and gamepy in my spare time.
+            </p>
+            <p> I am also experienced in other
+                languages
+                such as Javascript, HTML, CSS, Typescript, SQL and Delphi.
+            </p>
+
+            <p>
+                Skill: Javascript, HTML, CSS, Typescript, SQL and Delphi
+
+            </p>
+        </center>
+    </div>
+    <br>
+    <br>
+
+
+    <div class="slideshow-container">
+        <br>
+        <br>
+        <center>
+            <h3>
+                Certificates
+            </h3>
+        </center>
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+            <center>
+                <div class="numbertext">1 / 6</div>
+                <img src="CV1.jpeg" style="width:50%">
+                <div class="text">Curriculum Vitae(1)</div>
+            </center>
+        </div>
+
+        <div class="mySlides">
+            <center>
+                <div class="numbertext">2 / 6</div>
+                <img src="CV2.jpeg" style="width:50%">
+                <div class="text">Curriculum Vitae(2)</div>
+            </center>
+        </div>
+
+        <div class="mySlides">
+            <center>
+                <div class="numbertext">3 / 6</div>
+                <img src="CV3.jpeg" style="width:50%">
+                <div class="text">Curriculum Vitae(3)</div>
+            </center>
+        </div>
+
+        <div class="mySlides">
+            <center>
+                <div class="numbertext">4 / 6</div>
+                <img src="MicrosoftCertificate.jpeg" style="width:50%">
+                <div class="text">Microsoft Python Certificate</div>
+            </center>
+        </div>
+
+        <div class="mySlides">
+            <center>
+                <div class="numbertext">5 / 6</div>
+                <img src="Udemy Python.jpg" style="width:50%">
+                <div class="text">Udemy Python Certificate</div>
+            </center>
+        </div>
+
+        <div class="mySlides">
+            <center>
+                <div class="numbertext">6 / 6</div>
+                <img src="Udemy HTML CSS.jpg" style="width:50%">
+                <div class="text">Udemy HTML and CSS Certificate</div>
+            </center>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
