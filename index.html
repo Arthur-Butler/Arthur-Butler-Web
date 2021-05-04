@@ -50,7 +50,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height: 12cm;
+        height: 13cm;
         margin: 0em;
         padding: 0em;
         position: inherit;
@@ -110,6 +110,7 @@
       #navbar {
         overflow: hidden;
         background-color: #333;
+        z-index: 2;
       }
 
       #navbar a {
@@ -184,6 +185,7 @@
       .slideshow-container {
         background-image: url(Slideshowbackground.jpg);
         width: 100%;
+        height: fit-content;
         border-radius: 1cm;
         position: relative;
         margin: auto;
@@ -298,10 +300,12 @@
         justify-content: center;
       }
 
-      ol.contacts {
+      ol.list {
         list-style-type: dotted;
-        font-size: 1cm;
+        font-size: 0.6cm;
         background-color: gray;
+        opacity: 0.6;
+        padding:1cm;
       }
     </style>
   </head>
@@ -328,6 +332,14 @@
           >Padlet</a
         >
       </center>
+      <br />
+      <div id="navbar">
+        <a href="#About Me">About Me</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Certificates">Certificates</a>
+        <a href="#Contact">Contact</a>
+      </div>
     </div>
     <script type="text/javascript">
       window.onscroll = function () {
@@ -349,13 +361,9 @@
         }
       }
     </script>
-    <div id="navbar">
-      <a href="#About Me">About Me</a>
-      <a href="#Skills">Skills</a>
-      <a href="#Projects">Projects</a>
-      <a href="#Certificates">Certificates</a>
-      <a href="#Contact">Contact</a>
-    </div>
+    <br />
+    <br />
+    <br />
     <div class="Aboutme" id="About Me">
       <center>
         <h2>About ME</h2>
@@ -380,21 +388,24 @@
         <p>
           My goal is to become a Senior Python back-end or fullstack developer.
         </p>
-        <p>
-          I find enjoyment from playing around with different python modules
-          such as numpy, opencv, math, django and gamepy in my spare time.
-        </p>
-        <p>
-          I am also experienced in other languages such as Javascript, HTML,
-          CSS, Typescript, SQL and Delphi.
-        </p>
-
-        <p>Skill: Javascript, HTML, CSS, Typescript, SQL and Delphi</p>
       </center>
     </div>
     <br />
     <br />
-
+    <div class="Skills" id="Skills">
+      <center><h2>Skills</h2></center>
+      <ol class="list">
+        <li>Python(DataFrames, Numpy, Gamepy, OpenCV)</li>
+        <li>CSS and HTML</li>
+        <li>Javascript(Node.js)</li>
+        <li>Video Editing(Windows Movie Maker, Adobe Premier Rush)</li>
+        <li>SQL </li>
+        <li>Typescript(Angular, Socket.io)</li>
+        <li>Delphi</li>
+        <li>C#</li>
+      </ol>
+    </div>
+    </div>
     <div class="slideshow-container" id="Certificates">
       <br />
       <center>
@@ -444,7 +455,6 @@
           <br />
           <br />
           <br />
-          <br />
           <div class="text">Microsoft Python Certificate</div>
         </center>
       </div>
@@ -456,7 +466,6 @@
           <br />
           <br />
           <br />
-          <br />
           <div class="text">Udemy Python Certificate</div>
         </center>
       </div>
@@ -465,7 +474,6 @@
         <center>
           <div class="numbertext">6 / 6</div>
           <img src="Udemy HTML CSS.jpg" style="width: 50%" />
-          <br />
           <br />
           <br />
           <br />
@@ -481,7 +489,6 @@
       <div class="caption-container">
         <p id="caption"></p>
       </div>
-
       <div style="text-align: center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
@@ -494,7 +501,7 @@
     <center>
       <h4>Contact Me</h4>
     </center>
-    <ol class="contacts" id="Contact">
+    <ol class="list" id="Contact">
       <li>Cellphone: 0658422435</li>
       <li>Email: arthur.butler@younglings.africa</li>
       <li>Instagram: @anyaniso2001</li>
